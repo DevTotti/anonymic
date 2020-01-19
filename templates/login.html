@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Anonym Login</title>
+    <link rel="icon" type="image/png" href="static/images/icons/favicon.ico"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
+    <link href="/static/login.css" rel="stylesheet" />
+  </head>
+
+<body>
+  
+<div class="login-page">
+  <div class="form">
+    <form method = "POST" action="/users/login" class="login-form">
+      <input type="text" name = "nickname" placeholder="nick_name"/>
+      <input type="password" name="password" placeholder="password"/>
+      <button input type="submit" >Log in</button>
+      <p class="message">Not registered? <a href="/register">Create an account</a></p>
+      <p class="message">Want to post for a friend? <a href="/post">Click here</a></p>
+    </form>
+  </div>
+</div>
+</body>
