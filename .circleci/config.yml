@@ -1,0 +1,26 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@0.2.1
+
+jobs:
+  build-and-test:
+    executor: python/default
+    steps:
+      - checkout
+      - run:
+          command:
+            echo 'export PATH=~$PATH:~/.local/bin' >> $BASH_ENV && source $BASH_ENV
+            pip install --user -r requirements.txt
+          name: Install Python Dependencies
+
+      - run:
+          command: ./manage.py test
+          name: Test
+
+
+
+workflows:
+  main:
+    jobs:
+      - build-and-test
