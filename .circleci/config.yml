@@ -14,11 +14,6 @@ jobs:
             pip install --user -r requirements.txt
           name: Install Python Dependencies
 
-      - run:
-          command: ./manage.py test
-          name: Test
-
-
 
 workflows:
   main:
